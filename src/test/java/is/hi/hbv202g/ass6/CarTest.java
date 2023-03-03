@@ -11,12 +11,16 @@ public class CarTest {
 
     @Before
     public void setUp() throws Exception {
-        car = new Car("Beetle");
+        car = new Car(getString());
+    }
+
+    private static String getString() {
+        return "Beetle";
     }
 
     @Test
     public void getNameOfCar() {
-        assertEquals("Beetle", car.getName());
+        assertEquals(getString(), car.getName());
     }
 
 }
